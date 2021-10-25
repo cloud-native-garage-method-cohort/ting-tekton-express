@@ -41,5 +41,14 @@ roleRef:
   kind: Role
   apiGroup: rbac.authorization.k8s.io
 subjects:
-  - name: build-bot
+  - name: build-robot
     kind: ServiceAccount
+
+---
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: webhook-receiver
+spec:
+  resourcetemplates:
+  

@@ -7,7 +7,7 @@ spec:
     - name: app-name
       value: express-sample-app
     - name: source-repo
-      value: https://github.com/cloud-native-garage-method-cohort/emea7-juan-ting-express
+      value: https://github.com/cloud-native-garage-method-cohort/ting-tekton-express
     - name: image-repo
       value: quay.io/jm_carnicero/express-assignment
   pipelineRef:
@@ -22,3 +22,14 @@ spec:
         resources:
           requests:
             storage: 1Gi
+  - name: git-ops-repo
+    volumeClaimTemplate:
+      spec:
+        resources:
+          requests:
+            storage: 1Gi
+        accessModes:
+        - ReadWriteOnce
+  - name: mycredentials
+    secret:
+      secretName: mycredentials-github
