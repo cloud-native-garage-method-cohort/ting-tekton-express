@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: quay-creds
+data:
+  .dockerconfigjson: ewogICJhdXRocyI6IHsKICAgICJxdWF5LmlvIjogewogICAgICAiYXV0aCI6ICJhbTFmWTJGeWJtbGpaWEp2SzJWdFpXRmZZbTl2ZEdOaGJYQTZNMGRDUlZjMFRVTlJTbEF6UlZJMVVscEdTRFpIU1U5VFExZzRORmRaTmtsRE4xUldWVUZGTURGR1N6WkpTbEV6VEZCWVZqVTBTRVZLVURKUVFsTlVPUT09IiwKICAgICAgImVtYWlsIjogIiIKICAgIH0KICB9Cn0=
+type: kubernetes.io/dockerconfigjson
